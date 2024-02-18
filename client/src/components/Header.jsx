@@ -9,10 +9,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default function Header() {
   return (
-    <Navbar expand="lg" sticky="top" className="bg-body-tertiary justify-content-around">
+    <Navbar id='header-nav' variant='dark' expand="lg" sticky="top" className="justify-content-around">
       <Container>
         <Navbar.Brand href="#home">
           <Image src={logo} roundedCircle style={{ height: "100px" }} />
@@ -24,7 +25,7 @@ export default function Header() {
           placement="end"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
+            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`} >
               <Image src={logo} roundedCircle style={{ height: "100px" }} />
             </Offcanvas.Title>
           </Offcanvas.Header>
@@ -36,21 +37,20 @@ export default function Header() {
               <Nav.Link href="#link">Contact</Nav.Link>
               <Nav.Link href="#link">FAQs</Nav.Link>
             </Nav>
-            <NavDropdown
+            <Nav>
+              <NavDropdown
               title="Account"
               id={`offcanvasNavbarDropdown-expand-lg`}
-              className='my-auto'
-              role='menuItem'
+              className='my-auto me-2'
+              menuRole='menu'
               drop='down-centered'
             >
               <NavDropdown.Item href="#action3">Login</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Register</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action4">Register</NavDropdown.Item>
             </NavDropdown>
-            <Button variant='primary mx-2'>Cart</Button>
+            <Nav.Link className=''><i class="bi bi-bag"></i> Cart</Nav.Link>
+            </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
