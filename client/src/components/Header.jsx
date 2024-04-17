@@ -22,14 +22,14 @@ export default function Header() {
     >
       <Container>
         <Navbar.Brand href="#home">
-          <Image src={logo} roundedCircle style={{ height: "120px" }} />
+          <Image src={logo} roundedCircle style={{ height: "75px" }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-md`}
           aria-labelledby={`offcanvasNavbarLabel-expand-md`}
           placement="end"
-          variant='dark'
+          variant="dark"
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
