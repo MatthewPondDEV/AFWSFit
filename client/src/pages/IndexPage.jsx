@@ -10,7 +10,7 @@ export default function IndexPage() {
   return (
     <Container fluid id="index-page">
       <Row>
-        <Col xs={12} style={{ height: "700px" }}></Col>
+        <Col xs={12} style={{ height: "1000px" }}></Col>
       </Row>
     </Container>
   );
